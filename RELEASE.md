@@ -1,5 +1,87 @@
 # Feather iOS Release Notes
 
+## Version 1.1.3 - August 23, 2011
+
+### New effects
+
+This update adds the following filter effects to the Effects plugin:
+
+* Always Sunny
+* Code Red
+* Negative
+
+### Modularized plugin resources
+
+This update additionally makes it easier to select which plugins (tools and effects) are enabled in your distribution, at compile time and at run time.
+
+#### Compile time customization
+
+Each plugin has its own bundle, containing resources used only by that individual plugin. These bundles are packaged within `AviarySDK-Plugins.bundle`. For now, the best way to omit a plugin and its resources entirely from your application is to remove that plugin's bundle from `AviarySDK-Plugins.bundle`. We are working on better ways to accomplish this, but if you only want to use a few plugins, simply remove the ones you don't intend to use.
+
+#### Run time customization
+
+A number of constants have been added to `AFFeatherConstants.h`, which correspond to values passed to `AFFeatherController`'s `-initWithImage:andTools:` method, and the `pluginId` property of `AFFeatherPlugin` objects (used in conjunction with the `-feather:buttonForPlugin:` delegate method).
+
+An example of initializing the `AFFeatherController` instance is as follows:
+
+	- (void)displayEditorForImage:(UIImage *)image
+	{
+		NSArray *tools = [NSArray arrayWithObjects:kAFEffects, kAFCrop, kAFRotate, kAFFlip, nil];
+		AFFeatherController *featherController = [[AFFeatherController alloc] initWithImage:image andTools:tools];
+		[featherController setDelegate:self];
+		[self displayModalViewController:featherController animated:YES];
+		[featherController release];
+	}
+
+And here is an example of customizing buttons:
+
+	- (UIButton *)feather:(AFFeatherController *)controller buttonForPlugin:(id<AFFeatherPlugin>)plugin
+	{
+		UIButton *button = [plugin button];
+		if ([[plugin pluginId] isEqualToString:kAFEffects]) {
+			// Set up the effects button
+		} else {
+			// Set up other buttons
+		}
+		return button;
+	}
+
+New plugin ID constants:
+
+	// Top-level plugin constants:
+
+	extern NSString *const kAFBlemish;
+	extern NSString *const kAFBlur;
+	extern NSString *const kAFBrightness;
+	extern NSString *const kAFColors;
+	extern NSString *const kAFContrast;
+	extern NSString *const kAFCrop;
+	extern NSString *const kAFDrawing;
+	extern NSString *const kAFEffects;
+	extern NSString *const kAFFlip;
+	extern NSString *const kAFMeme;
+	extern NSString *const kAFRedeye;
+	extern NSString *const kAFRotate;
+	extern NSString *const kAFSaturation;
+	extern NSString *const kAFSharpen;
+	extern NSString *const kAFStickers;
+	extern NSString *const kAFText;
+	extern NSString *const kAFWhiten;
+
+	// Effects plugin constants:
+
+	extern NSString *const kAFAlwaysSunny;
+	extern NSString *const kAFAutoEnhance;
+	extern NSString *const kAFCinematic;
+	extern NSString *const kAFCodeRed;
+	extern NSString *const kAFDaydream;
+	extern NSString *const kAFHeatwave;
+	extern NSString *const kAFIndiglow;
+	extern NSString *const kAFNegative;
+	extern NSString *const kAFOriginal;
+
+---
+
 ## Version 1.1.2 - August 16, 2011
 
 This update mainly provides better interface customization support, particularly for applying images to different interface elements. A new protocol and three new properties have been added to `AFFeatherController`.

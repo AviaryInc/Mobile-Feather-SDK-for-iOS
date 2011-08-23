@@ -8,6 +8,7 @@
 // on any properties, methods or protocols marked "don't use."
 
 #import <UIKit/UIKit.h>
+#import "AFFeatherConstants.h"
 
 @class AFFeatherController;
 
