@@ -1,5 +1,11 @@
 # Feather iOS Release Notes
 
+## Version 1.1.4 - September 7, 2011
+
+This update resolves a display issue caused by hiding the status bar.
+
+---
+
 ## Version 1.1.3 - August 23, 2011
 
 ### New effects

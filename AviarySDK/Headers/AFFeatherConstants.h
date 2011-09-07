@@ -15,7 +15,6 @@ extern NSString *const kAFCrop;
 extern NSString *const kAFDrawing;
 extern NSString *const kAFEffects;
 extern NSString *const kAFFlip;
-extern NSString *const kAFMeme;
 extern NSString *const kAFRedeye;
 extern NSString *const kAFRotate;
 extern NSString *const kAFSaturation;
