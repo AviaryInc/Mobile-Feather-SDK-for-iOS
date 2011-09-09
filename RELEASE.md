@@ -1,5 +1,14 @@
 # Feather iOS Release Notes
 
+## Version 1.1.5 - September 8, 2011
+
+This update resolves two issues in the 1.1.4 build:
+
+1. Running the Cinematic effect resulted in an all-white image.
+2. Applying empty text with the text tool caused a crash.
+
+---
+
 ## Version 1.1.4 - September 7, 2011
 
 This update resolves a display issue caused by hiding the status bar.
