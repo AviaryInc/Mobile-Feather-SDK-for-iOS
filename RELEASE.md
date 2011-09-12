@@ -1,5 +1,11 @@
 # Feather iOS Release Notes
 
+## Version 1.1.7 - September 12, 2011
+
+The text of the cancellation confirmation dialog has been updated.
+
+---
+
 ## Version 1.1.6 - September 12, 2011
 
 This update adds the following methods to the `AFFeatherDelegate` protocol:
