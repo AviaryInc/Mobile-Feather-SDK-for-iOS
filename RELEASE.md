@@ -1,5 +1,15 @@
 # Feather iOS Release Notes
 
+## Version 1.1.6 - September 12, 2011
+
+This update adds the following methods to the `AFFeatherDelegate` protocol:
+
+	- (BOOL)featherShouldConfirmCancel:(AFFeatherController *)featherController;
+	
+Implement this method to control whether or not a confirmation dialog is presented to the user upon dismissing the SDK interface without saving.
+
+---
+
 ## Version 1.1.5 - September 8, 2011
 
 This update resolves two issues in the 1.1.4 build:

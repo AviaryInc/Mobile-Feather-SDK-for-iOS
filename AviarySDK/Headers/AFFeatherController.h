@@ -50,6 +50,8 @@
 
 - (UIButton *)feather:(AFFeatherController *)featherController buttonForPlugin:(id<AFFeatherPlugin>)plugin;
 
+- (BOOL)featherShouldConfirmCancel:(AFFeatherController *)featherController;
+
 #pragma mark -
 #pragma mark Old delegate methods (don't use)
 
