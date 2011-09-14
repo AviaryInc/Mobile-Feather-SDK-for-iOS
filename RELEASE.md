@@ -1,5 +1,14 @@
 # Feather iOS Release Notes
 
+## Version 1.1.8 - September 14, 2011
+
+This update includes important fixes related to App Store submission:
+
+* Fixed some internal methods that conflicted with private APIs.
+* Updated all targets to allow integration with universal (iPhone/iPad) apps.
+
+---
+
 ## Version 1.1.7 - September 12, 2011
 
 The text of the cancellation confirmation dialog has been updated.
