@@ -1,5 +1,14 @@
 # Feather iOS Release Notes
 
+## Version 1.1.9 - October 7, 2011
+
+This is a minor update. A much more significant update is coming shortly.
+
+* Built library against the iOS 5 GM SDK with Xcode 4.2
+* Fixed a divide by zero error in -calculateMinMaxZoom (Issue #2)
+
+---
+
 ## Version 1.1.8 - September 14, 2011
 
 This update includes important fixes related to App Store submission:
