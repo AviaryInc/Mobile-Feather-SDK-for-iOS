@@ -32,3 +32,5 @@ extern NSString *const kAFHeatwave;
 extern NSString *const kAFIndiglow;
 extern NSString *const kAFNegative;
 extern NSString *const kAFOriginal;
+
+extern NSArray *AFDefaultTools(void);

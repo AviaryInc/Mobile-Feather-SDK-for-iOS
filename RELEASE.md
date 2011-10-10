@@ -1,5 +1,37 @@
 # Feather iOS Release Notes
 
+## Version 1.2.0 - October 10, 2011
+
+This release features many bug fixes and a new (optional) iPad interface. We're also now building against the iOS 5 SDK with Xcode 4.2 GM.
+
+### Features
+
+We've cleaned up the public interface to `AFFeatherController`, and added an init method allowing iPad apps to display an interface tailored to the iPad form factor:
+
+    - (id)initWithImage:(UIImage *)image andTools:(NSArray *)tools andUserInterfaceIdiom:(UIUserInterfaceIdiom)idiom;
+    
+There are currently two possible values you can pass via the `idiom` parameter:
+
+    UIUserInterfaceIdiomPhone
+    UIUserInterfaceIdiomPad
+    
+Passing the first will initialize the controller with the iPhone interface, while the latter will initialize with the iPad interface. Note: `UIUserInterfaceIdiomPad` will only work correctly on iPad devices.
+
+The standard init methods are still present, and will display the interface associated with the current device's user interface idiom:
+
+    - (id)initWithImage:(UIImage *)image;
+    - (id)initWithImage:(UIImage *)image andTools:(NSArray *)tools;
+
+### Bug fixes
+
+A number of issues with 1.1.x have been reported. Here are a few of the changes we've made:
+
+1. Fixed an issue where image orientation was not preserved after applying plugins.
+2. Fixed an intermittent crash caused by a zero geometry bug.
+3. Fixed a number of substantial memory leaks.
+
+---
+
 ## Version 1.1.9 - October 7, 2011
 
 This is a minor update. A much more significant update is coming shortly.
