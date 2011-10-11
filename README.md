@@ -19,6 +19,7 @@ Contents
 		* Colors
 		* Background Images
 	* Buttons
+    * iPad Interface Options
 
 Overview
 --------
@@ -223,3 +224,20 @@ Here is a partial example implementation of this method:
 		}
 		return button;
 	}
+
+### iPad Interface Options
+
+By default, the interface provided by the `AFFeatherController` will match the form factor of the current device. For example, if the app is running on an iPad, the default behavior of the SDK will be to display an interface that makes use of the entire screen. However, iPad app developers may want to use the iPhone/iPod interface instead (for example, presenting the `AFFeatherController` within a `UIPopoverController`). As of version 1.2.0, the following init method allows you to choose between the two:
+
+    - (id)initWithImage:(UIImage *)image andTools:(NSArray *)tools andUserInterfaceIdiom:(UIUserInterfaceIdiom)idiom;
+    
+Currently, there are only two possible values for `idiom`:
+
+    UIUserInterfaceIdiomPhone
+    UIUserInterfaceIdiomPad
+
+The former will cause the interface to match the screen dimensions of iPhone/iPod devices, while the latter will display an interface tailored for the iPad. Note: the iPad interface should only be displayed within apps running on iPad devices and the iPad simulator. Displaying the iPad interface on other devices may result in undefined behavior.
+
+If you want to display the default tool set, use the `AFDefaultTools()` function defined in `AFFeatherConstants.h`. For example:
+
+    AFFeatherController *controller = [[[AFFeatherController alloc] initWithImage:anImage andTools:AFDefaultTools() andUserInterfaceIdiom:UIUserInterfaceIdiomPhone] autorelease];

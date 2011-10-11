@@ -1,5 +1,11 @@
 # Feather iOS Release Notes
 
+## Version 1.2.1 - October 11, 2011
+
+This release aims to resolve a duplicate symbol error encountered when using [MBProgressHUD](https://github.com/jdg/MBProgressHUD) with the Aviary SDK.
+
+---
+
 ## Version 1.2.0 - October 10, 2011
 
 This release features many bug fixes and a new (optional) iPad interface. We're also now building against the iOS 5 SDK with Xcode 4.2 GM.
