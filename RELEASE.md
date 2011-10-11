@@ -1,5 +1,11 @@
 # Feather iOS Release Notes
 
+## Version 1.2.2 - October 11, 2011
+
+Fixes a resizing error causing images with certain `imageOrientation` property values to become distorted.
+
+---
+
 ## Version 1.2.1 - October 11, 2011
 
 This release aims to resolve a duplicate symbol error encountered when using [MBProgressHUD](https://github.com/jdg/MBProgressHUD) with the Aviary SDK.
