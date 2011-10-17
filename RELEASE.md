@@ -1,5 +1,11 @@
 # Feather iOS Release Notes
 
+## Version 1.2.3 - October 17, 2011
+
+Follow-up fix for the resizing bug affecting images smaller than 960x960.
+
+---
+
 ## Version 1.2.2 - October 11, 2011
 
 Fixes a resizing error causing images with certain `imageOrientation` property values to become distorted.
