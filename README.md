@@ -74,6 +74,7 @@ In order to use the SDK in an existing app, you must do the following:
 
 		QuartzCore.framework
 		CoreGraphics.framework
+		CoreText.framework
 
 4. **Copy resources**
 

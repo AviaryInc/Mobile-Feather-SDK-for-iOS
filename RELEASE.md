@@ -1,5 +1,19 @@
 # Feather iOS Release Notes
 
+## Version 1.3.0 - October 28, 2011
+
+The Meme tool has been restored as a beta feature. It is disabled by default, but you can enable it by passing the following constant (defined in `AFFeatherConstants.h`) when creating your `AFFeatherController` instance:
+
+	extern NSString *const kAFMeme;
+	
+As a result of adding this tool, we have also introduced a dependency on Core Text. Please add this framework to your "Link Binary With Libraries" build phase, **regardless of whether or not you're using the meme tool**:
+
+	CoreText.framework
+	
+We may periodically release more of these beta tools in the future, so stay tuned!
+
+---
+
 ## Version 1.2.3 - October 17, 2011
 
 Follow-up fix for the resizing bug affecting images smaller than 960x960.

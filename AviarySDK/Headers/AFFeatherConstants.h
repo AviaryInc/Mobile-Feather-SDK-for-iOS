@@ -15,6 +15,7 @@ extern NSString *const kAFCrop;
 extern NSString *const kAFDrawing;
 extern NSString *const kAFEffects;
 extern NSString *const kAFFlip;
+extern NSString *const kAFMeme;
 extern NSString *const kAFRedeye;
 extern NSString *const kAFRotate;
 extern NSString *const kAFSaturation;
@@ -33,4 +34,24 @@ extern NSString *const kAFIndiglow;
 extern NSString *const kAFNegative;
 extern NSString *const kAFOriginal;
 
-extern NSArray *AFDefaultTools(void);
+static NSArray *AFDefaultTools()
+{
+    return [NSArray arrayWithObjects:
+        kAFEffects,
+        kAFCrop,
+        kAFRotate,
+        kAFFlip,
+        kAFBrightness,
+        kAFContrast,
+        kAFSaturation,
+        kAFColors,
+        kAFRedeye,
+        kAFStickers,
+        kAFDrawing,
+        kAFText,
+        kAFWhiten,
+        kAFBlemish,
+        kAFSharpen,
+        kAFBlur,
+    nil];
+}
