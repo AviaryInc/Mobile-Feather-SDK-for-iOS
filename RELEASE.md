@@ -1,5 +1,12 @@
 # Feather iOS Release Notes
 
+## Version 1.3.1 - November 18, 2011
+
+* Minor bug fixes and improvements
+* Changed the text of "Save" to "Done"
+
+---
+
 ## Version 1.3.0 - October 28, 2011
 
 The Meme tool has been restored as a beta feature. It is disabled by default, but you can enable it by passing the following constant (defined in `AFFeatherConstants.h`) when creating your `AFFeatherController` instance:
