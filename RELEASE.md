@@ -1,5 +1,9 @@
 # Feather iOS Release Notes
 
+## Version 1.3.2 - November 20, 2011
+
+* Minor internal fixes and tweaks
+
 ## Version 1.3.1 - November 18, 2011
 
 * Minor bug fixes and improvements
