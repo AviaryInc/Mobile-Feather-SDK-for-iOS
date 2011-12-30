@@ -44,14 +44,14 @@ If there's a feature you'd like to see in the SDK that isn't currently available
 
 The SDK consists of a static library, Objective-C header files, and one or more resource bundles containing configuration files and images. The static library is a universal binary for use on iOS device and simulator architectures (armv6/7 and i386).
 
-	AviarySDK
-	├── Headers
-	│   └── AFFeatherController.h
-	│   └── AFFeatherConstants.h
-	├── Resources
-	│   └── AviarySDK-Core.bundle
-	│   └── AviarySDK-Plugins.bundle
-	└── libAviarySDK-universal.a
+	AviarySDK/
+	|-- Headers/
+	|   |-- AFFeatherController.h
+	|   |-- AFFeatherConstants.h
+	|-- Resources/
+	|   |-- AviarySDK-Core.bundle
+	|   |-- AviarySDK-Plugins.bundle
+	|-- libAviarySDK-universal.a
 	
 Note: you can view the contents of the `.bundle` files we distribute. In general, we do not recommend modifying their contents, with the exception of `AviarySDK-Plugins.bundle` (see below).
 
