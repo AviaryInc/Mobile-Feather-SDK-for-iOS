@@ -1,35 +1,38 @@
-Aviary Feather iOS Setup Guide
+Aviary iOS SDK Setup Guide
 ==============================
 
 Contents
 --------
 
-* Overview
-	* Prerequisites
-	* Download & Support
-	* Package Contents
-* Quick Start
-	* Setup
-	* Basic Usage
-* Plugin Selection
-	* Run-time selection
-	* Compile-time selection
-* Interface Customization
-	* Colors and Background Images
-		* Colors
-		* Background Images
-	* Buttons
-    * iPad Interface Options
+* [Overview](#overview)
+	* [Prerequisites](#prerequisites)
+	* [Download & Support](#download-support)
+	* [Package Contents](#package-contents)
+* [Quick Start](#quick-start)
+	* [Setup](#setup)
+	* [Basic Usage](#basic-usage)
+* [Plugin Selection](#plugin-selection)
+	* [Run-time selection](#run-time)
+	* [Compile-time selection](#compile-time)
+* [Interface Customization](#customization)
+	* [Colors and Background Images](#colors-images)
+		* [Colors](#colors)
+		* [Background Images](#background-images)
+	* [Buttons](#buttons)
+    	* [iPad Interface Options](#ipad)
 
+<a name="overview"></a>
 Overview
 --------
 
 This document will guide you through the process of integrating the Aviary Feather iOS SDK into your app, as well as customizing its interface and managing its resources.
 
+<a name="prerequisites"></a>
 ### Prerequisites
 
 In order to follow this guide, you must have the iOS 4.3 SDK (or newer) and Xcode 4 installed on your system. For the latest versions, please visit Apple's [iOS Dev Center](http://developer.apple.com/devcenter/ios/).
 
+<a name="download-support"></a>
 ### Download
 
 Visit [our Github repository](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS) to get the latest copy of the SDK, and to stay up to date with future releases.
@@ -40,6 +43,7 @@ If you encounter any bugs, report them using [our repository's issue tracker](ht
 
 If there's a feature you'd like to see in the SDK that isn't currently available, please post it on [our feedback page](/mobile-feedback).
 
+<a name="package-contents"></a>
 ### Package Contents
 
 The SDK consists of a static library, Objective-C header files, and one or more resource bundles containing configuration files and images. The static library is a universal binary for use on iOS device and simulator architectures (armv6/7 and i386).
@@ -55,9 +59,11 @@ The SDK consists of a static library, Objective-C header files, and one or more 
 	
 Note: you can view the contents of the `.bundle` files we distribute. In general, we do not recommend modifying their contents, with the exception of `AviarySDK-Plugins.bundle` (see below).
 
+<a name="quick-start"></a>
 Quick Start
 -----------
 
+<a name="setup"></a>
 ### Setup
 
 In order to use the SDK in an existing app, you must do the following:
@@ -94,6 +100,7 @@ In order to use the SDK in an existing app, you must do the following:
 
 		#import "AFFeatherController.h"
 
+<a name="basic-usage"></a>
 ### Basic Usage
 
 The simplest way to use the SDK is to create and display an instance of `AFFeatherController` (a `UIViewController` subclass). You should present it modally, like so:
@@ -119,11 +126,13 @@ At minimum, you should implement the following `AFFeatherDelegate` methods in yo
 
 You don't need to worry about dismissing the `AFFeatherController` in these delegate methods.
 
+<a name="plugin-selection"></a>
 Plugin Selection
 ----------------
 
 You may select which plugins are available to the user, either at compile time or at run time.
 
+<a name="run-time"></a>
 ### Run-time selection
 
 To control which plugins are displayed in the SDK's interface at run time, use the following method to initialize the `AFFeatherController` instance:
@@ -140,12 +149,14 @@ To control which plugins are displayed in the SDK's interface at run time, use t
 		[self displayModalViewController:featherController animated:YES];
 	}
 
+<a name="compile-time"></a>
 ### Compile-time Selection
 
 To control which plugins are available to your app at compile time, you may choose to modify the contents of `AviarySDK-Plugins.bundle`. This bundle contains a separate bundle for each plugin; removing a plugin's bundle will omit its resources from your app, and will prevent the plugin's code from loading.
 
 Note: if you remove a plugin's resource bundle, you will not be able to load it at run time, even when using the run-time selection method above.
 
+<a name="customization"></a>
 Interface Customization
 -----------------------
 
@@ -158,6 +169,7 @@ In general, customizations are implemented in the following ways:
 
 See below for details.
 
+<a name="colors-images"></a>
 ### Colors and Background Images
 
 You may set the tint color or background image of any object that responds to the `AFInterfaceElement` protocol, defined as follows:
@@ -181,10 +193,12 @@ The `AFFeatherController` class includes the following properties that respond t
 	// The "parameters" bar (at the bottom of the screen when a plugin is active):
 	@property (...) id<AFInterfaceElement> paramsBar;
 
+<a name="colors"></a>
 #### Colors
 
 You may set the `tintColor` property to a `UIColor` object in the device RGB color space (i.e. as returned by the `CGColorSpaceCreateDeviceRGB()` function). The behavior of this property when used with a color object in another color space, for example one created with UIColor's `colorWithPatternImage:` method, is undefined. Use the `backgroundImage` property to apply your pattern image instead.
 
+<a name="background-images"></a>
 #### Background Images
 
 The `backgroundImage` property allows background images and textures to be applied to different views in the SDK. In most cases, it is implemented by using `+[UIColor colorWithPatternImage:]`, and setting the resulting color to the `backgroundColor` property of a view, with the following exceptions:
@@ -196,6 +210,7 @@ The `backgroundImage` and `tintColor` properties may be used simultaneously, alt
 
 All tint colors and background images should be set after initializing the `AFFeatherController`, but **before** displaying it to the user.
 
+<a name="buttons"></a>
 ### Buttons
 
 You may customize the appearance of the plugin buttons displayed at the bottom of the screen by implementing the following delegate method:
@@ -226,6 +241,7 @@ Here is a partial example implementation of this method:
 		return button;
 	}
 
+<a name="ipad"></a>
 ### iPad Interface Options
 
 By default, the interface provided by the `AFFeatherController` will match the form factor of the current device. For example, if the app is running on an iPad, the default behavior of the SDK will be to display an interface that makes use of the entire screen. However, iPad app developers may want to use the iPhone/iPod interface instead (for example, presenting the `AFFeatherController` within a `UIPopoverController`). As of version 1.2.0, the following init method allows you to choose between the two:
