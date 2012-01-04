@@ -1,5 +1,7 @@
 # Aviary iOS SDK Release Notes
 
+[Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
+
 ## Version 1.3.3 - November 20, 2011
 
 * Fixed a layout bug when using fewer than 15 tools in the iPad interface.
