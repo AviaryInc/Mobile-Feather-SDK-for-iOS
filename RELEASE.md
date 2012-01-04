@@ -1,4 +1,4 @@
-# Feather iOS Release Notes
+# Aviary iOS SDK Release Notes
 
 ## Version 1.3.3 - November 20, 2011
 
