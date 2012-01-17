@@ -41,7 +41,7 @@ Visit [our Github repository](https://github.com/AviaryInc/Mobile-Feather-SDK-fo
 
 If you encounter any bugs, report them using [our repository's issue tracker](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/issues) to ensure a quick response.
 
-If there's a feature you'd like to see in the SDK that isn't currently available, please post it on [our feedback page](/mobile-feedback).
+If there's a feature you'd like to see in the SDK that isn't currently available, please post it on [our feedback page](http://www.aviary.com/feature-requests).
 
 <a name="package-contents"></a>
 ### Package Contents
