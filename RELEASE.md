@@ -2,6 +2,12 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.0 - January 17, 2012
+
+Welcome to the new and improved Aviary editor! This is a ground-up redesign, including a completely new user interface, updated effects, and a few new tools. We'll be following up with new features and bug fixes on a regular basis, so check back soon for updates.
+
+---
+
 ## Version 1.3.3 - November 20, 2011
 
 * Fixed a layout bug when using fewer than 15 tools in the iPad interface.
