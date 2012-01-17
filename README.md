@@ -4,22 +4,25 @@ Aviary iOS SDK Setup Guide
 Contents
 --------
 
-* Overview
-	* Prerequisites
-	* Package Contents
-* Quick Start
-	* Setup
-	* Usage
+* [Overview](#overview)
+	* [Prerequisites](#prerequisites)
+	* [Package Contents](#package-contents)
+* [Quick Start](#quick-start)
+	* [Setup](#setup)
+	* [Usage](#usage)
 
+<a name="overview"></a>
 Overview
 --------
 
 This document will guide you through the process of integrating the Aviary iOS SDK into your app, as well as configuring its interface and managing its resources.
 
+<a name="prerequisites"></a>
 ### Prerequisites
 
 In order to follow this guide, you must have the iOS 5.0 SDK and Xcode 4.2 installed on your system. For the latest versions, please visit Apple's [iOS Dev Center](http://developer.apple.com/devcenter/ios/).
 
+<a name="package-contents"></a>
 ### Package Contents
 
 The SDK consists of a static library, Objective-C header files, and one or more resource bundles containing configuration files and images. The static library is a universal binary for use on iOS device and simulator architectures (armv6/7 and i386).
@@ -33,9 +36,11 @@ The SDK consists of a static library, Objective-C header files, and one or more 
 	
 Note: you can view the contents of the `.bundle` files we distribute. In general, we do not recommend or support modifying their contents.
 
+<a name="quick-start"></a>
 Quick Start
 -----------
 
+<a name="setup"></a>
 ### Setup
 
 In order to use the SDK in an existing app, you must do the following:
@@ -73,6 +78,7 @@ In order to use the SDK in an existing app, you must do the following:
 
 		#import "AFPhotoEditorController.h"
 
+<a name="usage"></a>
 ### Basic Usage
 
 The simplest way to use the SDK is to create and display an instance of `AFPhotoEditorController` (a `UIViewController` subclass). You can present it modally, like so:
