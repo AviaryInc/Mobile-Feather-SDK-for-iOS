@@ -9,6 +9,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Accelerate/Accelerate.h>
 
+#import "AFPhotoEditorControllerOptions.h"
+
 @class AFPhotoEditorController;
 
 /**
@@ -45,13 +47,26 @@
 @property (nonatomic, assign) id<AFPhotoEditorControllerDelegate> delegate;
 
 /**
- * The designated initializer for this class.
+ * Initialize the photo editor controller with an image and configuration options. This
+ * is the designated initializer for this class.
  *
  * @param image The image to edit.
+ * @param options (optional) Additional configuration options. See
+ * AFPhotoEditorControllerOptions.h for more information.
  *
  * @note As mentioned above, the dimensions of the edited image may be smaller than the
  * input image.
+ * @see AFPhotoEditorControllerOptions.h
  * @see photoEditor:finishedWithImage:
+ */
+- (id)initWithImage:(UIImage *)image options:(NSDictionary *)options;
+
+/**
+ * Initialize the photo editor controller with an image and the default options.
+ *
+ * @param image The image to edit.
+ *
+ * @see initWithImage:options:
  */
 - (id)initWithImage:(UIImage *)image;
 

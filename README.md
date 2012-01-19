@@ -9,7 +9,9 @@ Contents
 	* [Package Contents](#package-contents)
 * [Quick Start](#quick-start)
 	* [Setup](#setup)
-	* [Usage](#usage)
+	* [Basic Usage](#usage)
+* [Customization](#customization)
+	* [Example](#customization-example)
 
 <a name="overview"></a>
 Overview
@@ -105,3 +107,42 @@ At minimum, you should implement the following `AFPhotoEditorControllerDelegate`
 	}
 
 You are responsible for dismissing the `AFPhotoEditorController`, which should typically be done in these delegate methods.
+
+<a name="customization"></a>
+## Customization
+
+The editor can be customized at runtime by passing options to the `-initWithImage:options:` method (which is also the designated initializer of `AFPhotoEditorController`). This section describes valid keys and values that may be passed in a dictionary to the second parameter of this method. All of the valid options keys are instances of `NSString`. More information can be found in `AFPhotoEditorControllerOptions.h`.
+
+### Tool selection and ordering
+
+* `kAFPhotoEditorControllerToolsKey`
+
+	 This key allows developers to customize the visibility of, and order in which tools appear in the SDK interface. A valid value for this key is a NSArray containing NSString instances whose values match the constants below. The order of the constants below also represents the default tool order, when this option is unspecified.
+	 
+	 	kAFEnhance      /* Enhance */
+		kAFEffects      /* Effects */
+		kAFOrientation  /* Orientation */
+		kAFCrop         /* Crop */
+		kAFBrightness   /* Brightness */
+		kAFContrast     /* Contrast */
+		kAFSaturation   /* Saturation */
+		kAFSharpness    /* Sharpness */
+		kAFDraw         /* Draw */
+		kAFText         /* Text */
+		kAFRedeye       /* Redeye */
+		kAFWhiten       /* Whiten */
+		kAFBlemish      /* Blemish */
+
+<a name="customization-example"></a>
+### Example
+
+The code sample below illustrates how to pass options to a controller instance on initialization.
+
+	- (void)displayEditorForImage:(UIImage *)imageToEdit
+	{
+		// Only display the Enhance, Effects, Orientation, Crop and Draw tools
+		NSArray *tools = [NSArray arrayWithObjects:kAFEnhance, kAFEffects, kAFOrientation, kAFCrop, kAFDraw, nil];
+		AFPhotoEditorController *editorController = [[AFPhotoEditorController alloc] initWithImage:imageToEdit options:[NSDictionary dictionaryWithObject:tools forKey:kAFPhotoEditorControllerToolsKey]];
+		[editorController setDelegate:self];
+		[self presentModalViewController:editorController animated:YES];
+	}
