@@ -24,6 +24,14 @@ This document will guide you through the process of integrating the Aviary iOS S
 
 In order to follow this guide, you must have the iOS 5.0 SDK and Xcode 4.2 installed on your system. For the latest versions, please visit Apple's [iOS Dev Center](http://developer.apple.com/devcenter/ios/).
 
+**Build time requirements**
+
+In order to use the Aviary SDK, you must be using the latest version of Apple's LLVM compiler. You should not have a problem if you're using a fresh install of Xcode 4.2+, which uses this compiler by default. However, if you are working on an older project, or you have upgraded from an older version of Xcode, make sure you're not using GCC.
+
+**Run time requirements**
+
+The minimum iOS version supported by the SDK is iOS 4.0. The many reasons for this choice include our use of ARC ([Automatic Reference Counting](http://developer.apple.com/library/ios/#releasenotes/ObjectiveC/RN-TransitioningToARC/_index.html#//apple_ref/doc/uid/TP40011226)) and our reliance on a number of Apple frameworks and libraries which require iOS 4, including [Accelerate](http://developer.apple.com/library/ios/#documentation/Accelerate/Reference/AccelerateFWRef/_index.html) and [libdispatch](http://libdispatch.macosforge.org/).
+
 <a name="package-contents"></a>
 ### Package Contents
 
@@ -47,9 +55,13 @@ Quick Start
 
 In order to use the SDK in an existing app, you must do the following:
 
+0. **Project setup**
+
+	Make sure you're running Xcode 4.2+ and compiling with Apple's LLVM compiler (3.0+).
+
 1. **Add files**
 	
-	Copy the AviarySDK folder into your project (select "Create groups for any added folders").
+	Copy the AviarySDK folder into your project (select "Create groups for any added folders" if needed).
 
 2. **Link against libraries**
 
