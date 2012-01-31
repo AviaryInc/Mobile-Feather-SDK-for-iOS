@@ -2,6 +2,23 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.1 - January 31, 2012
+
+* New feature: in-app purchases for the Effects tool! This feature is disabled by default and only available to select partners. Please contact us at api@aviary.com for more information about selling Effect packs in your app.
+* Updated translations
+* Updated analytics library
+* Minor bug fixes and improvements
+
+**Note**: the addition of in-app purchase functionality and our updated analytics code now requires apps integrating the SDK to link against the following libraries:
+
+* StoreKit.framework
+* libz1.2.5.dylib
+* libsqlite3.0.dylib
+
+Please update your build settings accordingly.
+
+---
+
 ## Version 2.0.1 - January 18, 2012
 
 * Added a new initialization method to `AFPhotoEditorController` allowing selection and reordering of tools in the SDK interface. Please see the "Customization" section of the README for more information.

@@ -67,12 +67,15 @@ In order to use the SDK in an existing app, you must do the following:
 
 	Check your target's "Link Binary With Libraries" build phase. Make sure your app is being linked against `libAviarySDK.a`.
 	
-	Link against the following frameworks (in addition to `Foundation.framework` and `UIKit.framework`):
+	Link against the following libraries and frameworks:
 
-		CoreGraphics.framework  (Required)
-		QuartzCore.framework    (Required)
-		Accelerate.framework    (Required)
-		CoreImage.framework     (Optional)
+		Foundation.framework
+		UIKit.framework
+		CoreGraphics.framework
+		QuartzCore.framework
+		Accelerate.framework
+		libz1.2.5.dylib
+		libsqlite3.0.dylib
 
 4. **Copy resources**
 

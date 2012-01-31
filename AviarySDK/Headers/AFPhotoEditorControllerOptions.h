@@ -10,13 +10,13 @@
 /** @defgroup AFPhotoEditorControllerOptions AFPhotoEditorController Option Dictionary Keys */
 
 /** @addtogroup AFPhotoEditorControllerOptions
- *  @{
+    @{
  */
 
 /**
- * This key allows developers to customize the visibility of, and order in which tools
- * appear in the SDK interface. A valid value for this key is a NSArray containing
- * NSString instances whose values match the constants below.
+    This key allows developers to customize the visibility of, and order in which
+    tools appear in the SDK interface. A valid value for this key is a NSArray
+    containing NSString instances whose values match the constants below.
  */
 extern NSString *const kAFPhotoEditorControllerToolsKey;
 
