@@ -74,6 +74,7 @@ In order to use the SDK in an existing app, you must do the following:
 		CoreGraphics.framework
 		QuartzCore.framework
 		Accelerate.framework
+		StoreKit.framework
 		libz1.2.5.dylib
 		libsqlite3.0.dylib
 
