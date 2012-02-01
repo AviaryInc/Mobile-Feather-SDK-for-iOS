@@ -2,6 +2,12 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.1.1 - February 1, 2012
+
+* Updated translations in the Effects tool
+
+---
+
 ## Version 2.1 - January 31, 2012
 
 * New feature: in-app purchases for the Effects tool! This feature is disabled by default and only available to select partners. Please contact us at api@aviary.com for more information about selling Effect packs in your app.
