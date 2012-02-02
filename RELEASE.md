@@ -2,6 +2,13 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.1.2 - February 2, 2012
+
+* Disabled analytics debug logging
+* Updated translations
+
+---
+
 ## Version 2.1.1 - February 1, 2012
 
 * Updated translations in the Effects tool
