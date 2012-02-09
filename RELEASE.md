@@ -2,6 +2,18 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.1.4 - February 9, 2012
+
+* Added a missing analytics call in Effects tool
+
+---
+
+## Version 2.1.3 - February 2, 2012
+
+* Fixed a potential crash when restoring in-app purchases
+
+---
+
 ## Version 2.1.2 - February 2, 2012
 
 * Disabled analytics debug logging
