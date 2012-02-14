@@ -2,6 +2,12 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.1.6 - February 14, 2012
+
+* Fixed the interaction between our analytics library and in-app purchase receipts
+
+---
+
 ## Version 2.1.5 - February 10, 2012
 
 * Fixed memory leaks
