@@ -22,6 +22,7 @@ extern NSString *const kAFPhotoEditorControllerToolsKey;
 
 extern NSString *const kAFEnhance;      /* Enhance */
 extern NSString *const kAFEffects;      /* Effects */
+extern NSString *const kAFStickers;     /* Stickers */
 extern NSString *const kAFOrientation;  /* Orientation */
 extern NSString *const kAFCrop;         /* Crop */
 extern NSString *const kAFBrightness;   /* Brightness */

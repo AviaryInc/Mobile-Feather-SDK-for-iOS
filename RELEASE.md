@@ -2,6 +2,16 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.2.0 - February 28, 2012
+
+* Added the Stickers tool, giving users the ability to add stickers to their photos! The Original pack is available to all users free of charge.
+* Added infrastructure for current and future downloadable content packs.
+* Updated the Night function in the Enhance tool.
+
+**Note**: this update adds a dependency on `CoreData.framework`. Information about downloadable content packs, as well as information about purchases if in-app purchase is enabled, is stored in a database in the app's user documents directory.
+
+---
+
 ## Version 2.1.6 - February 14, 2012
 
 * Fixed the interaction between our analytics library and in-app purchase receipts

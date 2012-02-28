@@ -77,6 +77,7 @@ In order to use the SDK in an existing app, you must do the following:
 		StoreKit.framework
 		libz1.2.5.dylib
 		libsqlite3.0.dylib
+        CoreData.framework
 
 4. **Copy resources**
 

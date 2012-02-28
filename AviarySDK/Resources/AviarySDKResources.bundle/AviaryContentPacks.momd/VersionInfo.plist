@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSManagedObjectModel_CurrentVersionName</key>
+	<string>AviaryContentPacks</string>
+	<key>NSManagedObjectModel_VersionHashes</key>
+	<dict>
+		<key>AviaryContentPacks</key>
+		<dict>
+			<key>EffectPack</key>
+			<data>
+			c4Yatnq1f0Qd5OBmVCaSYwWEEbaXWucjnjdhJeBAzYM=
+			</data>
+			<key>EffectPackItem</key>
+			<data>
+			WuWjH0WPCNmKzk3ZaO2/GAAy38FJ2xatF4XJgmanAuk=
+			</data>
+			<key>Pack</key>
+			<data>
+			JjiTc+W/IA4bQFEeLqjjDdlo1fFV6aat/VGleAbE3JM=
+			</data>
+			<key>PackItem</key>
+			<data>
+			gxO7fgo34syMHfFu1+XlUH5kEFDeTuUL5fSeikSpg48=
+			</data>
+			<key>StickerPack</key>
+			<data>
+			TqstnlPLrgnb9v/ZG/ZOKQR7k8JpACUEv9xh3eRBFjo=
+			</data>
+			<key>StickerPackItem</key>
+			<data>
+			k0Ek15K5WVCuqo+tWxQ5C35iWzLPbtjZfy2K8oPsbxo=
+			</data>
+		</dict>
+	</dict>
+</dict>
+</plist>
