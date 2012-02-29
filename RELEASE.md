@@ -2,6 +2,12 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.2.1 - February 28, 2012
+
+* Fixed UI-related bug affecting in-app purchase partners.
+
+---
+
 ## Version 2.2.0 - February 28, 2012
 
 * Added the Stickers tool, giving users the ability to add stickers to their photos! The Original pack is available to all users free of charge.
