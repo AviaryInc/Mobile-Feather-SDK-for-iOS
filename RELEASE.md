@@ -2,6 +2,12 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.2.2 - March 20, 2012
+
+* Fixed missing in-app purchase reporting.
+
+---
+
 ## Version 2.2.1 - February 28, 2012
 
 * Fixed UI-related bug affecting in-app purchase partners.
