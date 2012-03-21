@@ -5,11 +5,6 @@
 //  Copyright (c) 2012 Aviary, Inc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
-#import <Accelerate/Accelerate.h>
-#import <StoreKit/StoreKit.h>
-
 #import "AFPhotoEditorControllerOptions.h"
 
 @class AFPhotoEditorController;

@@ -2,6 +2,18 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.2.4 - March 21, 2012
+
+* Fixed a crash triggered by multiple launches of the editor.
+
+---
+
+## Version 2.2.3 - March 20, 2012
+
+* Added the Viewfinder pack for in-app purchase.
+
+---
+
 ## Version 2.2.2 - March 20, 2012
 
 * Fixed missing in-app purchase reporting.
