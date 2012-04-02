@@ -6,6 +6,9 @@
 //
 
 #import "AFPhotoEditorControllerOptions.h"
+#import "AFPhotoEditorSession.h"
+#import "AFPhotoEditorContext.h"
+#import "AFPhotoEditorStyle.h"
 
 @class AFPhotoEditorController;
 
@@ -43,6 +46,21 @@
 @interface AFPhotoEditorController : UIViewController
 
 @property (nonatomic, assign) id<AFPhotoEditorControllerDelegate> delegate;
+
+/**
+    Returns a session object that can be used for later processing.
+ 
+    @see AFPhotoEditorSession.h
+ */
+@property (nonatomic, strong, readonly) AFPhotoEditorSession *session;
+
+/**
+    Returns an object that can be used to control various visual aspects of the
+    photo editor, including colors.
+ 
+    @see AFPhotoEditorStyle.h
+ */
+@property (strong, nonatomic, readonly) AFPhotoEditorStyle *style;
 
 /**
     Initialize the photo editor controller with an image and configuration options.

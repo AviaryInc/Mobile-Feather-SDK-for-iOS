@@ -2,6 +2,51 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.3.4 - April 2, 2012
+
+This is the first public release of 2.3.x. We've added a few new features and fixed a number of issues since the last 2.2.x release, all of which are documented below. Enjoy!
+
+---
+
+## Version 2.3.3 - March 29, 2012
+
+* Updated analytics code
+
+---
+
+## Version 2.3.2 - March 26, 2012
+
+* Improved memory conservation: memory for high-res output is only allocated if needed (it is not allocated if the user does not perform any actions in the editor).
+
+* The image passed to an `AFPhotoEditorContext` render call will now be `nil` if the user does nothing in the editor (instead of a non-nil, but empty `UIImage` object). The same behavior occurs if the user taps "Cancel" in the editor.
+
+* Fixed a minor bug in the "Auto" action inside the  Enhance tool.
+
+* Added sound to the Brightness, Contrast and Saturation tools (the same sound played by the iOS keyboard; the sound will play if the user has "Keyboard Clicks" enabled in the Settings app).
+
+---
+
+## Version 2.3.1 - March 23, 2012
+
+* Minor changes and bug fixes
+
+---
+
+## Version 2.3.0 - March 22, 2012
+
+* Added three new classes:
+
+		AFPhotoEditorStyle
+		AFPhotoEditorSession
+		AFPhotoEditorContext
+
+	These classes allow developers to control the appearance of an `AFPhotoEditorController` instance, obtain high-resolution output from the editor, and more. See the "High Resolution" and "Customization" sections in the README for more information.
+
+* Added the "Viewfinder" effect pack for in-app purchase partners.
+* Bug fixes and other incremental improvements.
+
+---
+
 ## Version 2.2.4 - March 21, 2012
 
 * Fixed a crash triggered by multiple launches of the editor.
