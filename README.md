@@ -34,7 +34,7 @@ In order to use the Aviary SDK, you must be using the latest version of Apple's 
 
 **Run time requirements**
 
-The minimum iOS version supported by the SDK is iOS 4.0. The many reasons for this choice include our use of ARC ([Automatic Reference Counting](http://developer.apple.com/library/ios/#releasenotes/ObjectiveC/RN-TransitioningToARC/_index.html#//apple_ref/doc/uid/TP40011226)) and our reliance on a number of Apple frameworks and libraries which require iOS 4, including [Accelerate](http://developer.apple.com/library/ios/#documentation/Accelerate/Reference/AccelerateFWRef/_index.html) and [libdispatch](http://libdispatch.macosforge.org/).
+The minimum iOS version supported by the SDK is iOS 4.0. The many reasons for this choice include our use of ARC ([Automatic Reference Counting](http://developer.apple.com/library/ios/#releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html)) and our reliance on a number of Apple frameworks and libraries which require iOS 4, including [Accelerate](http://developer.apple.com/library/ios/#documentation/Accelerate/Reference/AccelerateFWRef/_index.html) and [libdispatch](http://libdispatch.macosforge.org/).
 
 <a name="package-contents"></a>
 ### Package Contents
@@ -79,9 +79,9 @@ In order to use the SDK in an existing app, you must do the following:
 		QuartzCore.framework
 		Accelerate.framework
 		StoreKit.framework
-		libz1.2.5.dylib
+		libz.1.2.5.dylib
 		libsqlite3.0.dylib
-        CoreData.framework
+		CoreData.framework
 
 4. **Copy resources**
 
