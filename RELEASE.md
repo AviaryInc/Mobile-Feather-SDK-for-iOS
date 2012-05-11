@@ -2,6 +2,18 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.3.6 - May 10, 2012
+
+* Fixed an issue where Stickers archives in the user's Documents directory caused apps to be rejected by Apple. These archives now include an extended attribute to prevent them from being backed up by iCloud. For more information about the fix for this issue, please see http://developer.apple.com/library/ios/#qa/qa1719/_index.html.
+
+---
+
+## Version 2.3.5 - April 5, 2012
+
+* Resolved a duplicate symbol linker error for apps that include MiniZip
+
+---
+
 ## Version 2.3.4 - April 2, 2012
 
 This is the first public release of 2.3.x. We've added a few new features and fixed a number of issues since the last 2.2.x release, all of which are documented below. Enjoy!
