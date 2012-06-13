@@ -8,9 +8,12 @@
 
 @class AFPhotoEditorContext;
 
+extern NSString *const AFPhotoEditorSessionCancelledNotification;
+
 @interface AFPhotoEditorSession : NSObject
 
 @property (nonatomic, assign, readonly, getter=isOpen) BOOL open;
+@property (nonatomic, assign, readonly, getter=isCancelled) BOOL cancelled;
 
 - (AFPhotoEditorContext *)createContext;
 - (AFPhotoEditorContext *)createContextWithSize:(CGSize)size;

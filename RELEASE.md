@@ -2,9 +2,21 @@
 
 [Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
 
+## Version 2.4.0 - June 13, 2012
+
+* New redeye, whiten and blemish tool implementations
+* New brightness and contrast tool implementations
+* New B&W and Sepia effects
+* New tool icons and improved editor visuals
+* Fixed a crash related to the high-res API
+* Added the ability to set valid interface orientations via a new runtime option (in AFPhotoEditorControllerOptions.h)
+* Many other bug fixes and improvements
+
+---
+
 ## Version 2.3.6 - May 10, 2012
 
-* Fixed an issue where Stickers archives in the user's Documents directory caused apps to be rejected by Apple. These archives now include an extended attribute to prevent them from being backed up by iCloud. For more information about the fix for this issue, please see http://developer.apple.com/library/ios/#qa/qa1719/_index.html.
+* Fixed an issue where Stickers archives in the user's Documents directory caused apps to be rejected by Apple. These archives now include an extended attribute to prevent them being backed up by iCloud.
 
 ---
 

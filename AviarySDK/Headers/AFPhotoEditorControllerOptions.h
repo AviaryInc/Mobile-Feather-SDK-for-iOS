@@ -35,4 +35,14 @@ extern NSString *const kAFRedeye;       /* Redeye */
 extern NSString *const kAFWhiten;       /* Whiten */
 extern NSString *const kAFBlemish;      /* Blemish */
 
+/**
+    Use this key to define the interface orientations you want to allow in
+    `-shouldAutorotateToInterfaceOrientation`. The value for this key should be
+    a NSArray of NSNumber objects wrapping UIInterfaceOrientation values. For
+    example, if you only want to support the portrait orientation, set the
+    following value for this key: `[NSArray arrayWithObject:[NSNumber
+    numberWithUnsignedInt:UIInterfaceOrientationPortrait]]`.
+ */
+extern NSString *const kAFPhotoEditorControllerSupportedOrientationsKey;
+
 /** @} */

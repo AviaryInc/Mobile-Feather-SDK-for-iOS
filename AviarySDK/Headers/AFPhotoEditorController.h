@@ -60,7 +60,7 @@
  
     @see AFPhotoEditorStyle.h
  */
-@property (strong, nonatomic, readonly) AFPhotoEditorStyle *style;
+@property (nonatomic, strong, readonly) AFPhotoEditorStyle *style;
 
 /**
     Initialize the photo editor controller with an image and configuration options.
@@ -85,5 +85,10 @@
     @see initWithImage:options:
  */
 - (id)initWithImage:(UIImage *)image;
+
+/**
+ Returns the SDK version number.
+ */
++ (NSString *)versionString;
 
 @end
