@@ -1,6 +1,7 @@
 # Aviary iOS SDK Release Notes
 
-[Subscribe to updates](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
+[Subscribe to updates: RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom)
+[Subscribe to updates: Twitter](http://twitter.com/aviarychangelog)
 
 ## Version 2.4.0 - June 13, 2012
 
