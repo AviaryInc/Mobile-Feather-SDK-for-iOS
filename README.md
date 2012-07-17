@@ -208,6 +208,7 @@ The editor can be customized at runtime by passing options to the `-initWithImag
 	 
 	 	kAFEnhance      /* Enhance */
 		kAFEffects      /* Effects */
+                kAFStickers     /* Stickers */
 		kAFOrientation  /* Orientation */
 		kAFCrop         /* Crop */
 		kAFBrightness   /* Brightness */

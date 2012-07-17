@@ -8,6 +8,8 @@
 
 @interface AFPhotoEditorStyle : NSObject
 
+@property (nonatomic, strong) UIColor *editorBackgroundColor;
+
 @property (nonatomic, strong) UIColor *backgroundColor;
 @property (nonatomic, strong) UIColor *accentColor;
 
