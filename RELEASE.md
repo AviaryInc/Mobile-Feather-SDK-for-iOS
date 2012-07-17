@@ -2,7 +2,7 @@
 
 Subscribe to updates: [RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom) | [Twitter](http://twitter.com/aviarychangelog)
 
-## Version 2.4.2 - July 9, 2012
+## Version 2.4.2 - July 17, 2012
 
 * New: straighten photos in the Orientation tool!
 * Fixed a potential crash in Effects/Stickers tools
