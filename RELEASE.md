@@ -2,6 +2,12 @@
 
 Subscribe to updates: [RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom) | [Twitter](http://twitter.com/aviarychangelog)
 
+## Version 2.4.4 - September 17, 2012
+
+* Improved the high-res rendering speed of the Orientation tool
+
+---
+
 ## Version 2.4.3 - September 13, 2012
 
 * Added armv7s architecture
