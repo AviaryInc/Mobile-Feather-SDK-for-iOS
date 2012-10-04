@@ -2,6 +2,19 @@
 
 Subscribe to updates: [RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom) | [Twitter](http://twitter.com/aviarychangelog)
 
+## Version 2.4.4.2 - October 4, 2012
+
+* Moved downloaded content and data files to /Library/Application Support/App Name/AviaryContentPacks[.sqlite]
+
+---
+
+## Version 2.4.4.1 - September 28, 2012
+
+* Fixed missing icons in slider-based tools (Brightness, Contrast, Saturation, Sharpness)
+* Fixed an issue causing incorrect high-res images edited using the Brightness tool to be incorrect in rare situations
+
+---
+
 ## Version 2.4.4 - September 17, 2012
 
 * Improved the high-res rendering speed of the Orientation tool
