@@ -38,7 +38,7 @@ In order to continue evolving the SDK, we've also deprecated a few high-res API 
 
 We've provided new methods to better support GPU-based image processing, one of the biggest features introduced in this update. These deprecated methods will continue to provide CPU-based processing for now, but expect them to be removed in 3.0.
 
-This version also includes a completely new, dynamic visual customization and configuration API, provided via class methods in `AFCustomization`. We've wired up the old visual customization API in `AFPhotoEditorStyle` to use the new one, so it should continue to function as expected.
+This version also includes a completely new, dynamic visual customization and configuration API, provided via class methods in `AFPhotoEditorCustomization`. We've wired up the old visual customization API in `AFPhotoEditorStyle` to use the new one, so it should continue to function as expected.
 
 If you run into any problems with the upgrade, let us know!
 
