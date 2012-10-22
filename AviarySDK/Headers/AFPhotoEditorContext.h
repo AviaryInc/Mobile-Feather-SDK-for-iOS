@@ -15,7 +15,16 @@
 @property (nonatomic, assign, readonly, getter=isCanceled) BOOL canceled;
 @property (nonatomic, assign, readonly, getter=isModified) BOOL modified;
 
-- (void)renderInputImage:(UIImage *)image completion:(void (^)(UIImage *result))completion;
+/*
+ These methods should be called from the main thread. Behavior when calling from a background thread is
+ undefined.
+ */
+- (void)render:(void (^)(UIImage *result))completion;
 - (void)cancelRendering;
+
+/*
+ AFPhotoEditorContext's `renderInputImage:completion:` is deprecated. Please create a context with AFPhotoEditorSession's `createContextWithImage:maxSize:` and use `render:` instead.
+ */
+- (void)renderInputImage:(UIImage *)image completion:(void (^)(UIImage *result))completion DEPRECATED_ATTRIBUTE;
 
 @end

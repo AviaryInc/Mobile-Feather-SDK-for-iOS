@@ -29,7 +29,7 @@
 
     @note The size of this image may not be equivalent to the size of the input
     image, if the input image is larger than the maximum image size supported by the
-    SDK. Currently (as of 1/17/12), the maximum size is {960.0, 960.0} pixels on all
+    SDK. Currently (as of 9/19/12), the maximum size is {1024.0, 1024.0} pixels on all
     devices.
  */
 - (void)photoEditor:(AFPhotoEditorController *)editor finishedWithImage:(UIImage *)image;

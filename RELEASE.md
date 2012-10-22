@@ -2,6 +2,48 @@
 
 Subscribe to updates: [RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom) | [Twitter](http://twitter.com/aviarychangelog)
 
+## Version 2.5.0 - October 3, 2012
+
+### Changes
+
+* Added tons of new customization options for our premium partners! Email us at partners@aviary.com if you're interested in deeper customization for your integration.
+* New in-app purchase for our premium partners: Mustache sticker pack
+* Added "Restore" button for screens with in-app purchases
+* iPhone 5 / iOS 6 optimization
+* It's now possible to disable localization
+* Customizable crop presets (and specify whether or not you want users to be able to invert them)
+* Bumped editing resolution up to 1024x1024
+* Added GL support for faster effects and enhance filters processing and much faster hires processing for all tools.
+* Enabled zoom for more tools
+* Added Meme tool
+* Stickers can now be dragged onto the photo
+
+### Updating
+
+Version 2.5.0 is a big update to the SDK, including GPU-based image processing, a new tool, and many improvements to existing user and developer-facing features. To support these great additions, we've added a couple of framework dependencies, namely:
+
+    OpenGLES.framework
+    CoreText.framework
+
+For the full list of frameworks, see README.md.
+
+In order to continue evolving the SDK, we've also deprecated a few high-res API methods in `AFPhotoEditorSession` and `AFPhotoEditorContext`:
+
+    // AFPhotoEditorSession.h
+    - (AFPhotoEditorContext *)createContext DEPRECATED_ATTRIBUTE;
+    - (AFPhotoEditorContext *)createContextWithSize:(CGSize)size DEPRECATED_ATTRIBUTE;
+    
+    // AFPhotoEditorContext.h
+    - (void)renderInputImage:(UIImage *)image completion:(void (^)(UIImage *result))completion DEPRECATED_ATTRIBUTE;
+
+We've provided new methods to better support GPU-based image processing, one of the biggest features introduced in this update. These deprecated methods will continue to provide CPU-based processing for now, but expect them to be removed in 3.0.
+
+This version also includes a completely new, dynamic visual customization and configuration API, provided via class methods in `AFCustomization`. We've wired up the old visual customization API in `AFPhotoEditorStyle` to use the new one, so it should continue to function as expected.
+
+If you run into any problems with the upgrade, let us know!
+
+---
+
 ## Version 2.4.4.2 - October 4, 2012
 
 * Moved downloaded content and data files to /Library/Application Support/App Name/AviaryContentPacks[.sqlite]
