@@ -273,142 +273,104 @@ Values for a given option are required to be of a specific type. The requirement
 
 In addition to defining the scope of a key's effect, the key path also defines the set of options that are available to customize. In the list of keys below, options listed under **inheritable** are inherited by refined key paths and those listed under **non-inheritable** can only be modified with the given key path.
 
-<table border="0" cellpading="0">
-    <tr>
-        <th align="left"><h3>editor</h3></th>
-    </tr>
-    <tr>
-        <th align="left"><h4>Inheritable</h4></th>
-    </tr>
-	<tr>
-		<td><code>UIColor *navigationBarCancelColor</code></td>
-	</tr>
-	<tr>
-		<td><p>No type restrictions. This key sets the background color of the editor's navigation bar cancel button</p></td>
-	</tr>
-	<tr>
-		<td><code>UIColor *navigationBarBackgroundColor</code></td>
-	</tr>
-	<tr>
-		<td><p>No type restrictions. This key sets the background color of the editor's navigation bar.</p></td>
-	</tr>
-	<tr>
-		<td><code>UIColor *navigationBarCancelTextColor</code></td>
-	</tr>
-	<tr>
-		<td><p>No type restrictions. This key sets the text color of the editor's navigation bar cancel button.</p></td>
-	</tr>
-	<tr>
-		<td><code>UIColor *accentColor</code></td>
-	</tr>
-	<tr>
-		<td><p>No type restrictions. This key sets the accent color of the tool views.</p></td>
-	</tr>
-	<tr>
-		<td><code>UIColor *backgroundColor</code></td>
-	</tr>
-	<tr>
-		<td><p>No type restrictions. This key sets the background color of the tool views.</p></td>
-	</tr>
-	<tr>
-		<td><code>UIColor *navigationBarTextColor</code></td>
-	</tr>
-	<tr>
-		<td><p>No type restrictions. This key sets the text color of the editor's navigation bar title.</p></td>
-	</tr>
-    <tr>
-        <th align="left"><h4>Non-Inheritable</h4></th>
-    </tr>
-    <tr>
-    	<td><code>UIColor *bottomBarButtonTextColor</code></td>
-    </tr>
-    <tr>
-    	<td><p>No type restrictions. This key sets the color of the text of the tool names in the editor's bottom bar.</p></td>
-    </tr>
-    <tr>
-    	<td><code>NSNumber *disableLocalization</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>YES</code> will disable localization of text in the editor. Defaults to <code>NO</code>.</p></td>
-    </tr>
-    <tr>
-    	<td><code>UIColor *canvasColor</code></td>
-    </tr>
-    <tr>
-    	<td><p>No type restrictions. This key sets the background color behind the photo being editted in the editor.</p></td>
-    </tr>
-    <tr>
-    	<td><code>UIColor *pageControlUnselectedColor</code></td>
-    </tr>
-    <tr>
-    	<td><p>No type restrictions. This key sets the color of the editor's page controls unselected state.</p></td>
-    </tr>
-    <tr>
-    	<td><code>NSString *leftNavigationBarButtonTitle</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSString</code> value represented by one of the three <code>kAFLeftNavigationTitlePreset</code> keys. This key sets the text of the editor's left navigation bar button.</p></td>
-    </tr>
-    <tr>
-    	<td><code>NSString *rightNavigationBarButtonTitle</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSString</code> value represented by one of the three <code>kAFRightNavigationTitlePreset</code> keys. This key sets the text of the editor's right navigation bar button.</p></td>
-    </tr>
-    <tr>
-    	<td><code>NSArray *toolOrder</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSArray</code> containing <code>NSString</code> values represented by one of the tool keys. This key sets the availablity and the display order of tools in the editor.</p></td>
-    </tr>
-    <tr>
-    	<td><code>UIColor *bottomBarButtonIconColor</code></td>
-    </tr>
-    <tr>
-    	<td><p>A non-pattern image <code>UIColor</code>. This key sets the color of each of the tool icons in the editor's bottom bar.</p></td>
-    </tr>
-    <tr>
-    	<td><code>NSArray *supportedOrientations</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSArray</code> containing <code>NSNumbers</code> each represening a valid /UIInterfaceOrientation</code>. This key sets the user interface orienations that the editor will support.</p></td>
-    </tr>
-</table>
-<table border="0" cellpading="0">
-    <tr>
-        <th align="left"><h3>editor.tool.crop</h3></th>
-    </tr>
-    <tr>
-        <th align="left"><h4>Non-Inheritable</h4></th>
-    </tr>
-    <tr>
-    	<td><code>NSNumber *cellWidth</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSNumber</code> representing a <code>Float</code> with value greater than or equal to 20.0 and less than or equal to 120.0. This key sets the width of the crop preset selection cells.</p></td>
-    </tr>
-    <tr>
-    	<td><code>NSNumber *enableInvert</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>NO</code> will prevent crop presets to be inverted. Defaults to <code>YES</code>. Presets with names, ie. <code>Square</code>, are not invertable, regardless of whether this key is set to <code>YES</code>.</p></td>
-    </tr>
-    <tr>
-    	<td><code>NSArray *presets</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSArray</code> containing <code>NSDictionaries</code> with the following key-value pairs:<br/><ul> <li><code>kAFCropPresetWidth</code> represents the preset's width. A valid value for this key is an <code>NSNumber</code> instance representing a float.</li><li><code>kAFCropPresetHeight</code> represents the preset's height. A valid value for this key is an <code>NSNumber</code> instance representing a float.</li><li><code>kAFCropPresetName</code> represents the preset's name. A valid value for this key is an <code>NSString</code> instance. This key is optional, and when not present the preset will be named "width x height". If inverted crop is enabled, the width and height values will correspond to those of the aspect ratio being displayed.</li></ul> This key sets the availablity and order of crop preset options. If Original and/or Custom options are enabled, then they will preceed the presets defined here. If this key is not set, then the default options are <code>Square</code>, <code>3x2</code>, <code>5x3</code>, <code>4x3</code>, <code>6x4</code>, and <code>7x5</code>.</p></td>
-    </tr>
-    <tr>
-    	<td><code>NSNumber *enableOriginal</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>NO</code> will disable the <code>Original</code> crop preset. Defaults to <code>YES</code>. The <code>Original</code> crop preset constrains the crop area to photo's original aspect ratio.</p></td>
-    </tr>
-    <tr>
-    	<td><code>NSNumber *enableCustom</code></td>
-    </tr>
-    <tr>
-    	<td><p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>NO</code> will disable the <code>Original</code> crop preset. Defaults to <code>YES</code>. The <code>Custom</code> crop preset does not contrain the crop area to any specific aspect ratio.</p></td>
-    </tr>
-</table>
+<h3>editor</h3>
+<ul>
+    <li>
+        <h4>Inheritable</h4>
+        <ul>
+            <li>
+                <p><code>UIColor *navigationBarCancelColor</code></p>
+                <p>No type restrictions. This key sets the background color of the editor's navigation bar cancel button</p>
+            </li>
+            <li>
+                <p><code>UIColor *navigationBarBackgroundColor</code></p>
+                <p>No type restrictions. This key sets the background color of the editor's navigation bar.</p>
+            </li>
+            <li>
+                <p><code>UIColor *navigationBarCancelTextColor</code></p>
+                <p>No type restrictions. This key sets the text color of the editor's navigation bar cancel button.</p>
+            </li>
+            <li>
+                <p><code>UIColor *accentColor</code></p>
+                <p>No type restrictions. This key sets the accent color of the tool views.</p>
+            </li>
+            <li>
+                <p><code>UIColor *backgroundColor</code></p>
+                <p>No type restrictions. This key sets the background color of the tool views.</p>
+            </li>
+            <li>
+                <p><code>UIColor *navigationBarTextColor</code></p>
+                <p>No type restrictions. This key sets the text color of the editor's navigation bar title.</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <h4>Non-inheritable</h4>
+        <ul>
+            <li>
+                <p><code>UIColor *bottomBarButtonTextColor</code></p>
+                <p>No type restrictions. This key sets the color of the text of the tool names in the editor's bottom bar.</p>
+            </li>
+            <li>
+                <p><code>NSNumber *disableLocalization</code></p>
+                <p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>YES</code> will disable localization of text in the editor. Defaults to <code>NO</code>.</p>
+            </li>
+            <li>
+                <p><code>UIColor *canvasColor</code></p>
+                <p>No type restrictions. This key sets the background color behind the photo being editted in the editor.</p>
+            </li>
+            <li>
+                <p><code>UIColor *pageControlUnselectedColor</code></p>
+                <p>No type restrictions. This key sets the color of the editor's page controls unselected state.</p>
+            </li>
+            <li>
+                <p><code>NSString *leftNavigationBarButtonTitle</code></p>
+                <p>An <code>NSString</code> value represented by one of the three <code>kAFLeftNavigationTitlePreset</code> keys. This key sets the text of the editor's left navigation bar button.</p>
+            </li>
+            <li>
+                <p><code>NSString *rightNavigationBarButtonTitle</code></p>
+                <p>An <code>NSString</code> value represented by one of the three <code>kAFRightNavigationTitlePreset</code> keys. This key sets the text of the editor's right navigation bar button.</p>
+            </li>
+            <li>
+                <p><code>NSArray *toolOrder</code></p>
+                <p>An <code>NSArray</code> containing <code>NSString</code> values represented by one of the tool keys. This key sets the availablity and the display order of tools in the editor.</p>
+            </li>
+            <li>
+                <p><code>UIColor *bottomBarButtonIconColor</code></p>
+                <p>A non-pattern image <code>UIColor</code>. This key sets the color of each of the tool icons in the editor's bottom bar.</p>
+            </li>
+            <li>
+                <p><code>NSArray *supportedOrientations</code></p>
+                <p>An <code>NSArray</code> containing <code>NSNumbers</code> each represening a valid /UIInterfaceOrientation</code>. This key sets the user interface orienations that the editor will support.</p>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h3>editor.tool.crop</h3>
+<ul>
+    <li>
+        <h4>Non-inheritable</h4>
+        <ul>
+            <li>
+                <p><code>NSNumber *cellWidth</code></p>
+                <p>An <code>NSNumber</code> representing a <code>Float</code> with value greater than or equal to 20.0 and less than or equal to 120.0. This key sets the width of the crop preset selection cells.</p>
+            </li>
+            <li>
+                <p><code>NSNumber *enableInvert</code></p>
+                <p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>NO</code> will prevent crop presets to be inverted. Defaults to <code>YES</code>. Presets with names, ie. <code>Square</code>, are not invertable, regardless of whether this key is set to <code>YES</code>.</p>
+            </li>
+            <li>
+                <p><code>NSArray *presets</code></p>
+                <p>An <code>NSArray</code> containing <code>NSDictionaries</code> with the following key-value pairs:<br/><ul> <li><code>kAFCropPresetWidth</code> represents the preset's width. A valid value for this key is an <code>NSNumber</code> instance representing a float.</li><li><code>kAFCropPresetHeight</code> represents the preset's height. A valid value for this key is an <code>NSNumber</code> instance representing a float.</li><li><code>kAFCropPresetName</code> represents the preset's name. A valid value for this key is an <code>NSString</code> instance. This key is optional, and when not present the preset will be named "width x height". If inverted crop is enabled, the width and height values will correspond to those of the aspect ratio being displayed.</li></ul> This key sets the availablity and order of crop preset options. If Original and/or Custom options are enabled, then they will preceed the presets defined here. If this key is not set, then the default options are <code>Square</code>, <code>3x2</code>, <code>5x3</code>, <code>4x3</code>, <code>6x4</code>, and <code>7x5</code>.</p>
+            </li>
+            <li>
+                <p><code>NSNumber *enableOriginal</code></p>
+                <p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>NO</code> will disable the <code>Original</code> crop preset. Defaults to <code>YES</code>. The <code>Original</code> crop preset constrains the crop area to photo's original aspect ratio.</p>
+            </li>
+            <li>
+                <p><code>NSNumber *enableCustom</code></p>
+                <p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>NO</code> will disable the <code>Original</code> crop preset. Defaults to <code>YES</code>. The <code>Custom</code> crop preset does not contrain the crop area to any specific aspect ratio.</p>
+            </li>
+        </ul>
+    </li>
+</ul>
