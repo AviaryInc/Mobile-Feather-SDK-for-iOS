@@ -2,7 +2,13 @@
 
 Subscribe to updates: [RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom) | [Twitter](http://twitter.com/aviarychangelog)
 
-## Version 2.5.0 - October 3, 2012
+## Version 2.5.1 - October 23, 2012
+
+* Fixed a bug preventing customization of the SDK's navigation bar text color
+
+---
+
+## Version 2.5.0 - October 22, 2012
 
 ### Changes
 
