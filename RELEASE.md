@@ -2,6 +2,11 @@
 
 Subscribe to updates: [RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom) | [Twitter](http://twitter.com/aviarychangelog)
 
+## Version 2.5.2 - October 29, 2012
+
+* Fixed issue causing AFPhotoEditorController's `style` attribute to always return nil
+* Fixed crash in the Meme tool caused by a missing resource file
+
 ## Version 2.5.1 - October 23, 2012
 
 * Fixed a bug preventing customization of the SDK's navigation bar text color
