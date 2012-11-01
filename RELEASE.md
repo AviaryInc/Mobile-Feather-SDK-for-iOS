@@ -2,10 +2,20 @@
 
 Subscribe to updates: [RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom) | [Twitter](http://twitter.com/aviarychangelog)
 
+## Version 2.5.3 - November 1, 2012
+
+* Fixed an issue causing a crash when pressing the Done button before the image loads
+* Fixed output UIImage `scale` and `size` property values
+* Improved UI responsiveness while loading the SDK for the first time
+
+---
+
 ## Version 2.5.2 - October 29, 2012
 
 * Fixed issue causing AFPhotoEditorController's `style` attribute to always return nil
 * Fixed crash in the Meme tool caused by a missing resource file
+
+---
 
 ## Version 2.5.1 - October 23, 2012
 
