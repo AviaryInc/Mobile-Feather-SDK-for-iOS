@@ -267,7 +267,7 @@ Values for a given key can be given in one of three ways. Using `+setOptionValue
 	[AFPhotoEditorCustomization setOptionValue:[UIColor redColor] forKey:@"editor.accentColor"]; // sets the global accent color to red
 	[AFPhotoEditorCustomization setOptionValueWithBlock:^{return [UIColor blueColor];} forKey:@"editor.tool.crop.accentColor"]; // sets the crop tool's accent color to blue
 	[AFPhotoEditorCustomization setOptionWithImageNamed:@"enhanceIcon.png" forKey:@"editor.tool.enhance.icon"]; // sets the enhance tool's icon
-	[AFPhotoEditorCustomization removeOptionValueForKey:@"editor.too.crop.accentColor"]; // Removes the crop tool specific accent color
+	[AFPhotoEditorCustomization removeOptionValueForKey:@"editor.tool.crop.accentColor"]; // Removes the crop tool specific accent color
 	
 Values for a given option are required to be of a specific type. The requirements for each option are enumerated in the list of keys below. If the value provided for a given key do not meet the requirements, it has no effect.
 
