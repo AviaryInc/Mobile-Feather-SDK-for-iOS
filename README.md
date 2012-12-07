@@ -32,7 +32,7 @@ In order to use the Aviary SDK, you must be using the latest version of Apple's 
 
 **Run time requirements**
 
-The minimum iOS version supported by the SDK is iOS 4.0. The many reasons for this choice include our use of ARC ([Automatic Reference Counting](http://developer.apple.com/library/ios/#releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html)) and our reliance on a number of Apple frameworks and libraries which require iOS 4, including [libdispatch](http://libdispatch.macosforge.org/).
+The minimum iOS version supported by the SDK is iOS 4.3. The many reasons for this choice include our use of ARC ([Automatic Reference Counting](http://developer.apple.com/library/ios/#releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html)) and our reliance on a number of Apple frameworks and libraries which require iOS 4, including [libdispatch](http://libdispatch.macosforge.org/).
 
 <a name="package-contents"></a>
 ### Package Contents
@@ -97,7 +97,7 @@ In order to use the SDK in an existing app, you must do the following:
 		
 		-ObjC -all_load -fobjc-arc
 		
-	Note: `-fobjc-arc` is only required if you are targeting iOS 4.x.
+	Note: `-fobjc-arc` is only required if you are targeting iOS 4.3.
 
 6. **Import headers**
 
@@ -117,7 +117,7 @@ The simplest way to use the SDK is to create and display an instance of `AFPhoto
 		[self presentViewController:editorController animated:YES completion:nil];
 	}
 	
-You may instead choose to display the controller in other ways, such as by presenting it within a `UIPopoverController` or by manually adding it to the view hierarchy. If you choose to present the controller in such a way, you are responsible for making sure it receives the standard view controller lifecycle methods, including `viewDidLoad`, `viewWillAppear:`, etc. The controller may be displayed full-screen, or you may display it in a smaller portion of the screen.
+You may instead choose to display the controller in other ways, such as by presenting it within a `UIPopoverController` or by manually adding it to the view hierarchy. If you choose to present the controller in such a way, you are responsible for making sure it receives the standard view controller lifecycle methods, including `viewDidLoad`, `viewWillAppear:`, etc. The controller may be displayed full-screen, or you may display it in a smaller portion of the screen. Note that pushing the controller onto a UINavigationController's stack is not recommended, since the SDK itself uses a subclass of UINavigationController.
 
 At minimum, you should implement the following `AFPhotoEditorControllerDelegate` methods in your presenting view controller:
 
@@ -157,13 +157,13 @@ A photo editor context is an object that can be used to "replay" an editing sess
 
     AFPhotoEditorContext *context = [session createContextWithImage:image];
 
-Or, when a maximum output size (for example, 1024x1024) is desired:
+Or, when a maximum output size (for example, 1200x1200) is desired:
     
-    AFPhotoEditorContext *context = [session createContextWithImage:image maxSize:CGSizeMake(1024, 1024)];
+    AFPhotoEditorContext *context = [session createContextWithImage:image maxSize:CGSizeMake(1200, 1200)];
 
-The first line above creates a context that can render the session onto an input image at full resolution if the dimensions of the input image are less than or equal to 1500px on each side and the input image is no larger than 3 megapixels. If the image is larger than this size, the output image will be downscaled to fit according to the aspect ratio of the input image.
+The first line above creates a context that can render the session onto an input image at full resolution if the input image is no larger than 3 megapixels. If the image is larger than this size, the output image will first be downscaled (maintaining aspect ratio) so that it is no larger than 3 megapixels.
 
-The second line above imposes a tighter restriction on the output size. If the dimensions of the image are greater than 1024px on a side, the image will be downscaled before processing.
+The second line above imposes a tighter restriction on the output size. If the dimensions of the image are greater than 1200px (in the above case) on a side, the image will be downscaled (maintaining aspect ratio) before processing.
 
 Once you have created a context from a session object, you can use it to render the session onto an input image like so:
 
@@ -313,11 +313,11 @@ In addition to defining the scope of a key's effect, the key path also defines t
             </li>
             <li>
                 <p><code>NSNumber *disableLocalization</code></p>
-                <p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>YES</code> will disable localization of text in the editor. Defaults to <code>NO</code>.</p>
+                <p>An <code>NSNumber</code> representing a <code>BOOL</code> value. Setting this key to <code>YES</code> will disable localization of text in the editor. Defaults to <code>NO</code>.</p>
             </li>
             <li>
                 <p><code>UIColor *canvasColor</code></p>
-                <p>No type restrictions. This key sets the background color behind the photo being editted in the editor.</p>
+                <p>No type restrictions. This key sets the background color behind the photo being edited in the editor.</p>
             </li>
             <li>
                 <p><code>UIColor *pageControlUnselectedColor</code></p>
@@ -333,7 +333,7 @@ In addition to defining the scope of a key's effect, the key path also defines t
             </li>
             <li>
                 <p><code>NSArray *toolOrder</code></p>
-                <p>An <code>NSArray</code> containing <code>NSString</code> values represented by one of the tool keys. This key sets the availablity and the display order of tools in the editor.</p>
+                <p>An <code>NSArray</code> containing <code>NSString</code> values represented by one of the tool keys. This key sets the availability and the display order of tools in the editor.</p>
             </li>
             <li>
                 <p><code>UIColor *bottomBarButtonIconColor</code></p>
@@ -341,7 +341,7 @@ In addition to defining the scope of a key's effect, the key path also defines t
             </li>
             <li>
                 <p><code>NSArray *supportedOrientations</code></p>
-                <p>An <code>NSArray</code> containing <code>NSNumbers</code> each represening a valid /UIInterfaceOrientation</code>. This key sets the user interface orienations that the editor will support.</p>
+                <p>An <code>NSArray</code> containing <code>NSNumbers</code> each representing a valid /UIInterfaceOrientation</code>. This key sets the user interface orientations that the editor will support.</p>
             </li>
         </ul>
     </li>
@@ -357,19 +357,19 @@ In addition to defining the scope of a key's effect, the key path also defines t
             </li>
             <li>
                 <p><code>NSNumber *enableInvert</code></p>
-                <p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>NO</code> will prevent crop presets to be inverted. Defaults to <code>YES</code>. Presets with names, ie. <code>Square</code>, are not invertable, regardless of whether this key is set to <code>YES</code>.</p>
+                <p>An <code>NSNumber</code> representing a <code>BOOL</code> value. Setting this key to <code>NO</code> will prevent crop presets to be inverted. Defaults to <code>YES</code>. Presets with names, i.e. <code>Square</code>, are not invertible, regardless of whether this key is set to <code>YES</code>.</p>
             </li>
             <li>
                 <p><code>NSArray *presets</code></p>
-                <p>An <code>NSArray</code> containing <code>NSDictionaries</code> with the following key-value pairs:<br/><ul> <li><code>kAFCropPresetWidth</code> represents the preset's width. A valid value for this key is an <code>NSNumber</code> instance representing a float.</li><li><code>kAFCropPresetHeight</code> represents the preset's height. A valid value for this key is an <code>NSNumber</code> instance representing a float.</li><li><code>kAFCropPresetName</code> represents the preset's name. A valid value for this key is an <code>NSString</code> instance. This key is optional, and when not present the preset will be named "width x height". If inverted crop is enabled, the width and height values will correspond to those of the aspect ratio being displayed.</li></ul> This key sets the availablity and order of crop preset options. If Original and/or Custom options are enabled, then they will preceed the presets defined here. If this key is not set, then the default options are <code>Square</code>, <code>3x2</code>, <code>5x3</code>, <code>4x3</code>, <code>6x4</code>, and <code>7x5</code>.</p>
+                <p>An <code>NSArray</code> containing <code>NSDictionaries</code> with the following key-value pairs:<br/><ul> <li><code>kAFCropPresetWidth</code> represents the preset's width. A valid value for this key is an <code>NSNumber</code> instance representing a float.</li><li><code>kAFCropPresetHeight</code> represents the preset's height. A valid value for this key is an <code>NSNumber</code> instance representing a float.</li><li><code>kAFCropPresetName</code> represents the preset's name. A valid value for this key is an <code>NSString</code> instance. This key is optional, and when not present the preset will be named "width x height". If inverted crop is enabled, the width and height values will correspond to those of the aspect ratio being displayed.</li></ul> This key sets the availability and order of crop preset options. If Original and/or Custom options are enabled, then they will precede the presets defined here. If this key is not set, then the default options are <code>Square</code>, <code>3x2</code>, <code>5x3</code>, <code>4x3</code>, <code>6x4</code>, and <code>7x5</code>.</p>
             </li>
             <li>
                 <p><code>NSNumber *enableOriginal</code></p>
-                <p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>NO</code> will disable the <code>Original</code> crop preset. Defaults to <code>YES</code>. The <code>Original</code> crop preset constrains the crop area to photo's original aspect ratio.</p>
+                <p>An <code>NSNumber</code> representing a <code>BOOL</code> value. Setting this key to <code>NO</code> will disable the <code>Original</code> crop preset. Defaults to <code>YES</code>. The <code>Original</code> crop preset constrains the crop area to photo's original aspect ratio.</p>
             </li>
             <li>
                 <p><code>NSNumber *enableCustom</code></p>
-                <p>An <code>NSNumber</code> represeting a <code>BOOL</code> value. Setting this key to <code>NO</code> will disable the <code>Original</code> crop preset. Defaults to <code>YES</code>. The <code>Custom</code> crop preset does not contrain the crop area to any specific aspect ratio.</p>
+                <p>An <code>NSNumber</code> representing a <code>BOOL</code> value. Setting this key to <code>NO</code> will disable the <code>Original</code> crop preset. Defaults to <code>YES</code>. The <code>Custom</code> crop preset does not constrain the crop area to any specific aspect ratio.</p>
             </li>
         </ul>
     </li>
