@@ -2,6 +2,17 @@
 
 Subscribe to updates: [RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom) | [Twitter](http://twitter.com/aviarychangelog)
 
+## Version 2.5.6 - January 2, 2013
+
+IMPORTANT: v2.5.6 is the last version of the Aviary iOS SDK which will support iOS 4.3+. Every new release starting with the upcoming v2.6 will require iOS 5.0+. If your app supports iOS 4, you should not update to v2.6+ as it may result in crashes for your iOS 4 users.
+
+* iOS 4 bug fixes, including a crash in the text tool
+* Fixed a bug preventing RTL languages (Hebrew, Arabic) from working properly in the text tool
+* Fixed some Meme tool bugs related to very small images
+* New customization option: remove shadows from toolbar buttons (Premium partners only)
+
+---
+
 ## Version 2.5.5 - November 16, 2012
 
 * Fixed a potential crash in some apps caused by the Meme tool
