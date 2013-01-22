@@ -2,11 +2,21 @@
 
 Subscribe to updates: [RSS](https://github.com/AviaryInc/Mobile-Feather-SDK-for-iOS/commits/master.atom) | [Twitter](http://twitter.com/aviarychangelog)
 
+## Version 2.5.8 - January 22, 2013
+
+IMPORTANT: v2.5.8 is the last version of the Aviary iOS SDK which will support iOS 4.3+. Every new release starting with the upcoming v2.6 will require iOS 5.0+. If your app supports iOS 4.3, you should not update to v2.6+ as it may result in crashes for your iOS 4.3 users.
+
+* iOS 4 bug fixes
+
+---
+
 ## Version 2.5.7 - January 18, 2013
 
 IMPORTANT: v2.5.7 is the last version of the Aviary iOS SDK which will support iOS 4.3+. Every new release starting with the upcoming v2.6 will require iOS 5.0+. If your app supports iOS 4.3, you should not update to v2.6+ as it may result in crashes for your iOS 4.3 users.
 
 * iOS 4 bug fixes
+
+---
 
 ## Version 2.5.6 - January 2, 2013
 
