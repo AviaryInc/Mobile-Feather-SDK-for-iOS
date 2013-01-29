@@ -1,0 +1,1 @@
+##The Aviary iOS SDK will no longer be distributed via GitHub, please visit http://www.aviary.com/ios to download the latest version.
